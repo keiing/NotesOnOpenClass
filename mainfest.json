@@ -1,0 +1,14 @@
+{
+    "name": "动漫网站",
+    "short_name": "动漫网站",
+    "display": "standalone",
+    "start_url": "",
+    "icons": [
+        {
+            "src": "./main.png",
+            "sizes": "144x144"
+        }
+    ],
+    "backgroun_color": "#aaa",
+    "theme_color": "#aaa"
+}

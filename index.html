@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="manifest" href="./mainfest.json">
+</head>
+
+<body>
+    <div>
+        <h2>我的动漫网页</h2>
+        <ul id="container"></ul>
+    </div>
+</body>
+<script src="./index.js"></script>
+<!-- 我们需要开启一条线程 实现 离线缓存 -->
+<!-- 下次访问我的时候 去缓存 -->
+<script>
+    window.addEventListener('load', () => {
+        if ('serviceWorker' in navigator) {
+            //需要注册一个serviceWorker 都是promise then await
+            //默认指向的是 aw 文件 存放的位置 {scope: '/'}
+            let registrtion = navigator.serviceWorker.register('./sw.js')
+            console.log(registrtion)
+        }
+        Notification.requestPermission().then(r => {
+            if (r === 'granted') {
+                new Notification('已允许', {
+                    body: "我可以给你推送消息了"
+                })
+            }
+        })
+    })
+    //PUSH API + Notifaction
+</script>
+
+</html>

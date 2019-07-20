@@ -1,0 +1,24 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "公开课",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keiing/NotesOnOpenClass.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/keiing/NotesOnOpenClass/issues"
+  },
+  "homepage": "https://github.com/keiing/NotesOnOpenClass#readme",
+  "dependencies": {
+    "async": "^3.1.0",
+    "axios": "^0.19.0",
+    "fetch": "^1.1.0"
+  }
+}

@@ -1,24 +1,12 @@
 {
-  "name": "node",
+  "name": "NotesOnOpenClass",
   "version": "1.0.0",
-  "description": "公开课",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/keiing/NotesOnOpenClass.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/keiing/NotesOnOpenClass/issues"
-  },
-  "homepage": "https://github.com/keiing/NotesOnOpenClass#readme",
+  "repository": "https://github.com/keiing/NotesOnOpenClass.git",
+  "author": "keiing <49868852+keiing@users.noreply.github.com>",
+  "license": "MIT",
   "dependencies": {
-    "async": "^3.1.0",
     "axios": "^0.19.0",
-    "fetch": "^1.1.0"
+    "express": "^4.17.1"
   }
 }

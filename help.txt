@@ -1,0 +1,10 @@
+Service Worker
+不能访问 /操作dom
+会自动休眠，不会随浏览器关闭所失效('必须手动卸载');
+离线自动缓存
+
+npm install -g yarn
+
+yarn init -y
+
+yarn add express axios #安装express框架 axios

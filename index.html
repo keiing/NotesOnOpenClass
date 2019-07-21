@@ -6,8 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-
     <link rel="manifest" href="./mainfest.json">
+
+    <!-- 希望res也支持 -->
+    <!-- 图标icon -->
+    <link rel="apple-touch-icon" href="apple-touch-icon-iphone.png">
+    <!-- 添加到主屏后的标题 和 short_name一致 -->
+    <meta name="apple-mobile-web-app-title" content="标题">
+    <!-- 隐藏·safari地址栏 standalone模式下默认隐藏 -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- 设置状态栏颜色 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <!-- 结束 -->
+
+    <link rel="stylesheet" href="./index.css">
 </head>
 
 <body>
@@ -17,20 +29,20 @@
     </div>
 </body>
 <script src="./index.js"></script>
-<!-- 我们需要开启一条线程 实现 离线缓存 -->
-<!-- 下次访问我的时候 去缓存 -->
+<!-- 我们需要开启一条线程 实现 离线缓存
+    下次访问我的时候 去缓存 -->
 <script>
     window.addEventListener('load', () => {
         if ('serviceWorker' in navigator) {
             //需要注册一个serviceWorker 都是promise then await
             //默认指向的是 aw 文件 存放的位置 {scope: '/'}
             let registrtion = navigator.serviceWorker.register('./sw.js')
-            console.log(registrtion)
+            // console.log('registrtion', registrtion)
         }
         Notification.requestPermission().then(r => {
             if (r === 'granted') {
                 new Notification('已允许', {
-                    body: "我可以给你推送消息了"
+                    body: "可以给你推送消息了"
                 })
             }
         })

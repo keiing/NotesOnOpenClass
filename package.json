@@ -6,7 +6,7 @@
   "author": "keiing <49868852+keiing@users.noreply.github.com>",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "express": "^4.17.1"
   }
 }
